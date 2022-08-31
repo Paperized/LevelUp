@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/stepFormLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <EditText
+        android:id="@+id/stepGoalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints=""
+        android:drawableStart="@android:drawable/ic_menu_myplaces"
+        android:drawablePadding="20dp"
+        android:ems="10"
+        android:hint="Total Km"
+        android:inputType="numberDecimal" />
+
+    <LinearLayout
+        android:id="@+id/stepCurrentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/stepCurrentKmText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:autofillHints=""
+            android:drawableStart="@android:drawable/ic_menu_compass"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Current KM"
+            android:inputType="none" />
+
+        <EditText
+            android:id="@+id/stepCurrentStepsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:autofillHints=""
+            android:drawableStart="@android:drawable/ic_menu_compass"
+            android:drawablePadding="20dp"
+            android:ems="10"
+            android:hint="Current steps"
+            android:inputType="none" />
+    </LinearLayout>
+
+</LinearLayout>

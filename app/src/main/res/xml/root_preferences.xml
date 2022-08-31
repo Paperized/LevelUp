@@ -1,0 +1,25 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:title="@string/action_settings">
+    <PreferenceCategory app:title="Preferences">
+
+        <EditTextPreference
+            app:defaultValue="true"
+            app:key="KEY_NAME"
+            app:summary="Your nickname in your journey."
+            app:title="Username"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="Step Counter Values">
+
+        <it.ilogreco.levelup.utils.FloatEditTextPreference
+            app:defaultValue="true"
+            app:key="KEY_STEP_LENGTH"
+            app:summary="An average of your step length in meters."
+            app:title="Step Length"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

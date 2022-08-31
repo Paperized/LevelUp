@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="30dp"
+    tools:context=".ui.metrics.MetricsFragment">
+
+    <TextView
+        android:id="@+id/welcomeText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/home_welcome_user"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="34sp" />
+
+    <TextView
+        android:id="@+id/totalText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_total_task"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/completedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_completed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/ongoingText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_ongoing"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/succeededText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_succeeded"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/failedText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_failed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/genericCountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_generic_count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/stepCountText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_step_count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/localizationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/stat_tasks_localization_count"
+        android:textAppearance="@style/TextAppearance.AppCompat.Small"
+        android:textSize="16sp" />
+
+    <com.github.mikephil.charting.charts.RadarChart
+        android:id="@+id/dataChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp" />
+
+</LinearLayout>

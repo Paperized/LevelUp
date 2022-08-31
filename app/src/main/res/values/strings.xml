@@ -1,0 +1,118 @@
+<resources>
+    <string name="app_name">LevelUp</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_delete">Delete</string>
+
+    <string name="menu_home">My Tasks</string>
+    <string name="menu_edit_task">Edit Tasks</string>
+    <string name="menu_edit_category">Edit Categories</string>
+
+    <string name="task_image">Task Image</string>
+    <string name="task_title">Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_difficulty">Difficulty</string>
+    <string name="task_category">Category</string>
+    <string name="task_additional_rw">Additional Reward</string>
+    <string name="task_type">Type</string>
+    <string name="task_begin">Start At</string>
+    <string name="task_end">End At</string>
+    <string name="task_completion">Completion Date</string>
+
+    <string name="task_result">Task Result</string>
+    <string name="task_result_note">Note</string>
+    <string name="task_result_date">Completion Date: %s</string>
+
+    <string name="step_counter">Task Step Counter</string>
+    <string name="step_counter_goal">Goal KM</string>
+    <string name="step_counter_current_km">Current KM</string>
+    <string name="step_counter_current_steps">Current Steps</string>
+
+    <string name="localization_task">Localization Task</string>
+    <string name="localization_task_address">Address</string>
+    <string name="localization_task_radius">Radius Completion</string>
+
+    <string name="appbar_pick_day">Pick a Day</string>
+    <string name="appbar_mark_complete">Mark as Complete</string>
+    <string name="appbar_completed">Completed!</string>
+
+    <string name="completion_dialog_title">Task Confirmation</string>
+    <string name="completion_dialog_message">Do you want to mark this task as completed?</string>
+    <string name="completion_dialog_negative">No</string>
+    <string name="completion_dialog_positive">Yes</string>
+
+    <string name="delete_dialog_title">Task DELETE</string>
+    <string name="delete_dialog_message">Do you really want to delete this task permanently?\nYour experience will reduce in those categories!</string>
+    <string name="delete_dialog_negative">No</string>
+    <string name="delete_dialog_positive">Yes</string>
+
+    <string name="delete_category_dialog_title">Category DELETE</string>
+    <string name="delete_category_dialog_message">Do you really want to delete this category permanently?\nYour experience will be lost!</string>
+    <string name="delete_category_dialog_negative">No</string>
+    <string name="delete_category_dialog_positive">Yes</string>
+
+    <string name="home_welcome_user">Welcome %s</string>
+    <string name="generic_stat">-> %s: %d</string>
+    <string name="stat_total_task">-> Total Tasks: %d</string>
+    <string name="stat_tasks_completed">-> Completed Tasks: %d</string>
+    <string name="stat_tasks_ongoing">-> Ongoing Tasks: %d</string>
+    <string name="stat_tasks_succeeded">-> Succeeded Tasks: %d</string>
+    <string name="stat_tasks_failed">-> Failed Tasks: %d</string>
+    <string name="stat_tasks_generic_count">-> Generic Tasks Count: %d</string>
+    <string name="stat_tasks_step_count">-> Step Counter Tasks Count: %d</string>
+    <string name="stat_tasks_localization_count">-> Localization Tasks Count: %d</string>
+
+    <array name="task_types">
+        <item>Generic</item>
+        <item>Step Counter</item>
+        <item>Localization</item>
+    </array>
+
+    <array name="category_icons">
+        <item>@android:drawable/ic_dialog_alert</item>
+        <item>@android:drawable/ic_dialog_email</item>
+        <item>@android:drawable/ic_dialog_map</item>
+        <item>@android:drawable/ic_lock_idle_alarm</item>
+        <item>@android:drawable/ic_lock_silent_mode_off</item>
+        <item>@android:drawable/ic_menu_edit</item>
+        <item>@android:drawable/stat_sys_headset</item>
+        <item>@android:drawable/ic_menu_month</item>
+        <item>@android:drawable/ic_menu_compass</item>
+        <item>@android:drawable/ic_popup_reminder</item>
+        <item>@android:drawable/btn_star_big_on</item>
+    </array>
+
+    <integer-array name="task_icons">
+        <item>@android:drawable/ic_dialog_alert</item>
+        <item>@android:drawable/ic_dialog_email</item>
+        <item>@android:drawable/ic_dialog_map</item>
+        <item>@android:drawable/ic_lock_idle_alarm</item>
+        <item>@android:drawable/ic_lock_silent_mode_off</item>
+        <item>@android:drawable/ic_menu_edit</item>
+        <item>@android:drawable/stat_sys_headset</item>
+        <item>@android:drawable/ic_menu_month</item>
+        <item>@android:drawable/ic_menu_compass</item>
+        <item>@android:drawable/ic_popup_reminder</item>
+    </integer-array>
+
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+
+</resources>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp"
+    android:layout_marginBottom="7dp"
+    android:background="@drawable/shadow_border"
+    android:gravity="center_vertical"
+    android:paddingTop="15dp"
+    android:paddingBottom="15dp">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="100dp"
+        android:layout_height="80dp"
+        android:minHeight="100dp">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/difficultyText"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:scaleX="0.75"
+            android:scaleY="0.75"
+            android:text="S"
+            android:textAlignment="center"
+            android:translationX="20dp"
+            android:translationY="25dp"
+            app:chipBackgroundColor="#E84646"
+            tools:ignore="TouchTargetSizeCheck" />
+
+        <ImageView
+            android:id="@+id/imageCategory"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            app:srcCompat="@android:drawable/ic_menu_compass" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.52"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/titleText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="My Task Name GERHREHREHREHBERHJNREJ"
+            android:textColor="@color/black"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_weight="0.48"
+        android:orientation="vertical">
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chipGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            app:chipSpacingHorizontal="1dp"
+            app:chipSpacingVertical="1dp">
+
+            <com.google.android.material.chip.Chip
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip4"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip20"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip21"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip24"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip23"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip22"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip19"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/chip18"
+                style="@style/Widget.MaterialComponents.Chip.Choice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checkable="false"
+                android:text="Prova"
+                app:chipBackgroundColor="?attr/colorSecondary"
+                app:ensureMinTouchTargetSize="false">
+
+            </com.google.android.material.chip.Chip>
+
+        </com.google.android.material.chip.ChipGroup>
+
+    </LinearLayout>
+
+</LinearLayout>
