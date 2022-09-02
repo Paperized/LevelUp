@@ -8,6 +8,7 @@ import androidx.lifecycle.Observer;
 
 import java.util.Locale;
 
+import it.ilogreco.levelup.data.FullUserTask;
 import it.ilogreco.levelup.databinding.FragmentTaskDetailBinding;
 import it.ilogreco.levelup.entity.StepCounterTask;
 import it.ilogreco.levelup.entity.utils.UserTaskType;
@@ -95,9 +96,10 @@ public class StepCounterTaskForm extends BaseTaskForm<StepCounterTask> implement
 
     private boolean setVisibility(Integer type) {
         boolean isStepCounter = type != null && type == UserTaskType.StepCounter;
-        if(isStepCounter && !isLoaded) {
+        FullUserTask fullUserTask = taskDetailViewModel.getCurrentTask();
+        if(fullUserTask != null && isStepCounter && !isLoaded) {
             isLoaded = true;
-            setValue(taskDetailViewModel.getCurrentTask().getStepCounterTask());
+            setValue(fullUserTask.getStepCounterTask());
         }
         else {
             int vs = isStepCounter ? View.VISIBLE : View.GONE;

@@ -1,7 +1,9 @@
 package it.ilogreco.levelup.ui.task_detail.components;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.net.Uri;
+import android.provider.MediaStore;
 import android.text.InputType;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
@@ -15,6 +17,8 @@ import com.smarteist.autoimageslider.IndicatorView.animation.type.IndicatorAnima
 import com.smarteist.autoimageslider.SliderAnimations;
 import com.smarteist.autoimageslider.SliderView;
 
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import it.ilogreco.levelup.R;
@@ -38,7 +42,7 @@ public class ResultTaskForm extends BaseTaskForm<TaskCompleted> implements Activ
         FragmentTaskDetailBinding binding = getBinding();
 
         SliderView sliderView = binding.includeResultTask.imageSlider;
-        sliderImageAdapter = new SliderImageAdapter();
+        sliderImageAdapter = new SliderImageAdapter(requireActivity().getContentResolver());
         sliderView.setIndicatorVisibility(true);
         sliderView.setIndicatorAnimation(IndicatorAnimationType.WORM);
         sliderView.setSliderTransformAnimation(SliderAnimations.SIMPLETRANSFORMATION);
@@ -47,8 +51,10 @@ public class ResultTaskForm extends BaseTaskForm<TaskCompleted> implements Activ
         sliderView.setSliderAdapter(sliderImageAdapter, true);
 
         UserTaskDetailFragment fragment = getUserFragment();
-        if(fragment != null)
-            registeredIntent = fragment.registerForActivityResult(new ActivityResultContracts.OpenMultipleDocuments(), this);
+        registeredIntent = fragment.registerForActivityResult(new ActivityResultContracts.OpenMultipleDocuments(), this);
+
+        binding.includeResultTask.pickImagesButton.setOnClickListener(this);
+        binding.includeResultTask.removeImageButton.setOnClickListener(this);
     }
 
     @Override
@@ -67,6 +73,10 @@ public class ResultTaskForm extends BaseTaskForm<TaskCompleted> implements Activ
         boolean isCompletedEditable = editMode && taskDetailViewModel.isCompleted;
 
         binding.includeResultTask.taskResultNote.setInputType(isCompletedEditable ? InputType.TYPE_CLASS_TEXT : InputType.TYPE_NULL);
+        binding.includeResultTask.taskResultExperience.setInputType(InputType.TYPE_NULL);
+        binding.includeResultTask.taskResultExperienceEach.setInputType(InputType.TYPE_NULL);
+        binding.includeResultTask.taskResultBonusExperience.setInputType(InputType.TYPE_NULL);
+
         binding.includeResultTask.pickImagesButton.setClickable(isCompletedEditable);
         binding.includeResultTask.removeImageButton.setClickable(isCompletedEditable);
     }
@@ -97,14 +107,8 @@ public class ResultTaskForm extends BaseTaskForm<TaskCompleted> implements Activ
     public TaskCompleted getValue() {
         TaskCompleted taskCompleted = new TaskCompleted();
         taskCompleted.setDescription(getBinding().includeResultTask.taskResultNote.getText().toString());
-        taskCompleted.setPhotos(sliderImageAdapter.getItems());
+        taskCompleted.setPhotos(taskDetailViewModel.uriList);
         return taskCompleted;
-    }
-
-    @Override
-    public void onPause() {
-        if(registeredIntent != null)
-            registeredIntent.unregister();
     }
 
     @Override
@@ -114,7 +118,9 @@ public class ResultTaskForm extends BaseTaskForm<TaskCompleted> implements Activ
                 requireActivity().getContentResolver().takePersistableUriPermission(uri, Intent.FLAG_GRANT_READ_URI_PERMISSION);
             }
 
+            taskDetailViewModel.uriList.addAll(result);
             sliderImageAdapter.addItems(result);
+
             getBinding().includeResultTask.imageSlider.setSliderAdapter(sliderImageAdapter, true);
             refreshImageContainer();
         }

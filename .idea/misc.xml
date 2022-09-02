@@ -26,6 +26,7 @@
         <entry key="app/src/main/res/layout/dialog_category_picker.xml" value="0.12170138888888889" />
         <entry key="app/src/main/res/layout/dialog_picker_gridview.xml" value="0.12170138888888889" />
         <entry key="app/src/main/res/layout/fragment_category_detail.xml" value="0.46514047866805414" />
+        <entry key="app/src/main/res/layout/fragment_category_list.xml" value="0.75" />
         <entry key="app/src/main/res/layout/fragment_difficulty_detail.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/fragment_difficulty_list.xml" value="0.2828125" />
         <entry key="app/src/main/res/layout/fragment_edit_category.xml" value="0.1" />

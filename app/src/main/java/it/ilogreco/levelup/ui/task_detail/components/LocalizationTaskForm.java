@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Locale;
 
 import it.ilogreco.levelup.adapter.AddressAdapter;
+import it.ilogreco.levelup.data.FullUserTask;
 import it.ilogreco.levelup.databinding.FragmentTaskDetailBinding;
 import it.ilogreco.levelup.entity.LocalizationTask;
 import it.ilogreco.levelup.entity.StepCounterTask;
@@ -152,9 +153,10 @@ public class LocalizationTaskForm extends BaseTaskForm<LocalizationTask> impleme
 
     private boolean setVisibility(Integer type) {
         boolean isLocalization = type != null && type == UserTaskType.Localization;
-        if(isLocalization && !isLoaded) {
+        FullUserTask fullUserTask = taskDetailViewModel.getCurrentTask();
+        if(fullUserTask != null && isLocalization && !isLoaded) {
             isLoaded = true;
-            setValue(taskDetailViewModel.getCurrentTask().getLocalizationTask());
+            setValue(fullUserTask.getLocalizationTask());
         }
         else {
             int vs = isLocalization ? View.VISIBLE : View.GONE;

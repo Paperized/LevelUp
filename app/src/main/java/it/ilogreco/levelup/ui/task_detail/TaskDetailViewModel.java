@@ -1,6 +1,7 @@
 package it.ilogreco.levelup.ui.task_detail;
 
 import android.app.Application;
+import android.net.Uri;
 
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
@@ -24,6 +25,7 @@ import it.ilogreco.levelup.repository.BaseRepository;
 import it.ilogreco.levelup.repository.LocalizationTaskRepository;
 import it.ilogreco.levelup.repository.TaskCategoryRepository;
 import it.ilogreco.levelup.repository.UserTaskRepository;
+import it.ilogreco.levelup.utils.Image;
 import it.ilogreco.levelup.utils.LiveDataExt;
 
 /**
@@ -43,6 +45,7 @@ public class TaskDetailViewModel extends AndroidViewModel implements Observer<Fu
     public Integer iconSelected;
     public boolean editMode;
     public AddressAdapterData selectedAddress;
+    public List<Uri> uriList;
     public final MutableLiveData<Integer> userTaskTypeSelected;
     ///////////////////////////////
 
@@ -155,6 +158,12 @@ public class TaskDetailViewModel extends AndroidViewModel implements Observer<Fu
                 selectedAddress = null;
             }
 
+            TaskCompleted taskCompleted = userTask.getTaskCompleted();
+            if(taskCompleted != null ) {
+                List<Uri> uris = taskCompleted.getPhotos();
+                uriList = uris != null ? new ArrayList<>(uris) : new ArrayList<>();
+            }
+
             userTaskTypeSelected.setValue(userTask.getUserTask().getType());
             userTaskLiveData.setValue(userTask);
         } else {
@@ -165,6 +174,8 @@ public class TaskDetailViewModel extends AndroidViewModel implements Observer<Fu
             fullUserTask.setTaskCategory(new ArrayList<>());
 
             isCompleted = false;
+
+            uriList = new ArrayList<>();
 
             userTaskTypeSelected.setValue(UserTaskType.Generic);
             userTaskLiveData.setValue(fullUserTask);
